@@ -9,8 +9,6 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	// Swagger docs.
-	_ "github.com/rsdmike/rps/docs"
 	"github.com/rsdmike/rps/internal/usecase"
 	"github.com/rsdmike/rps/pkg/logger"
 )
@@ -38,7 +36,7 @@ func NewRouter(handler *gin.Engine, l logger.Interface, t usecase.Repositories) 
 	handler.GET("/metrics", gin.WrapH(promhttp.Handler()))
 
 	// Routers
-	h := handler.Group("/v1")
+	h := handler.Group("/api/v1/admin")
 	{
 		newDomainRoutes(h, t.Domains, l)
 	}

@@ -29,7 +29,7 @@ Using the principles of Robert Martin (aka Uncle Bob).
 ## Quick start
 Local development:
 ```sh
-# Postgres, RabbitMQ
+# Postgres
 $ make compose-up
 # Run app with migrations
 $ make run
@@ -90,7 +90,6 @@ $ go run -tags migrate ./cmd/app
 
 ### `internal/controller`
 Server handler layer (MVC controllers). The template shows 2 servers:
-- RPC (RabbitMQ as transport)
 - REST http (Gin framework)
 
 Server routers are written in the same style:
@@ -133,11 +132,6 @@ It is an abstract web API that business logic works with.
 For example, it could be another microservice that business logic accesses via the REST API.
 The package name changes depending on the purpose.
 
-### `pkg/rabbitmq`
-RabbitMQ RPC pattern:
-- There is no routing inside RabbitMQ
-- Exchange fanout is used, to which 1 exclusive queue is bound, this is the most productive config
-- Reconnect on the loss of connection
 
 ## Dependency Injection
 In order to remove the dependence of business logic on external packages, dependency injection is used.

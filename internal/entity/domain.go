@@ -6,6 +6,6 @@ type Domain struct {
 	ProvisioningCert              string `json:"provisioningCert" example:"-----BEGIN CERTIFICATE-----\n..."`
 	ProvisioningCertStorageFormat string `json:"provisioningCertStorageFormat" example:"PKCS12"`
 	ProvisioningCertPassword      string `json:"provisioningCertPassword" example:"my_password"`
-	TenantId                      string `json:"tenantId" example:"abc123"`
+	TenantID                      string `json:"tenantId" example:"abc123"`
 	Version                       string `json:"version,omitempty" example:"1.0.0"`
 }

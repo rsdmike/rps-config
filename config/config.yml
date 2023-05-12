@@ -4,6 +4,10 @@ app:
 
 http:
   port: '8080'
+  allowed_origins: 
+    - '*'
+  allowed_headers: 
+    - '*'
 
 logger:
   log_level: 'debug'

@@ -11,6 +11,6 @@ type IEEE8021xConfig struct {
 	ActiveInS0             bool   `json:"activeInS0,omitempty" example:"true"`
 	PxeTimeout             int    `json:"pxeTimeout" example:"60"`
 	WiredInterface         bool   `json:"wiredInterface,omitempty" example:"false"`
-	TenantId               string `json:"tenantId" example:"abc123"`
+	TenantID               string `json:"tenantId" example:"abc123"`
 	Version                string `json:"version,omitempty" example:"1.0.0"`
 }

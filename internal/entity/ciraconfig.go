@@ -11,7 +11,7 @@ type CIRAConfig struct {
 	AuthMethod          int    `json:"authMethod" example:"2"`
 	MpsRootCertificate  string `json:"mpsRootCertificate" example:"-----BEGIN CERTIFICATE-----\n..."`
 	ProxyDetails        string `json:"proxyDetails" example:"http://example.com"`
-	TenantId            string `json:"tenantId" example:"abc123"`
+	TenantID            string `json:"tenantId" example:"abc123"`
 	RegeneratePassword  bool   `json:"regeneratePassword,omitempty" example:"true"`
 	Version             string `json:"version,omitempty" example:"1.0.0"`
 }
