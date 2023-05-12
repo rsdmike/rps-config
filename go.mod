@@ -8,7 +8,7 @@ require (
 	github.com/gin-gonic/gin v1.7.7
 	github.com/golang-migrate/migrate/v4 v4.15.1
 	github.com/golang/mock v1.6.0
-	github.com/ilyakaznacheev/cleanenv v1.2.6
+	github.com/ilyakaznacheev/cleanenv v1.4.2
 	github.com/jackc/pgx/v4 v4.14.1
 	github.com/prometheus/client_golang v1.11.0
 	github.com/rs/zerolog v1.26.1
