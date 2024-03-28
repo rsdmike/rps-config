@@ -1,4 +1,5 @@
 package entity
+
 // type Profile struct {
 // 	ProfileName                string               `json:"profileName,omitempty" example:"My Profile"`
 // 	AMTPassword                string               `json:"amtPassword,omitempty" example:"my_password"`
@@ -30,22 +31,22 @@ package entity
 // 	Version           string `json:",omitempty"`
 // }
 
-type TlsMode int
+type TLSMode int
 
 const (
-	InvalidTlsMode    TlsMode = -1
-	NoneTlsMode       TlsMode = 0
-	ServerOnlyTlsMode TlsMode = 1
-	ServerAllowNonTLS TlsMode = 2
-	MutualOnlyTlsMode TlsMode = 3
-	MutualAllowNonTLS TlsMode = 4
+	InvalidTLSMode    TLSMode = -1
+	NoneTLSMode       TLSMode = 0
+	ServerOnlyTLSMode TLSMode = 1
+	ServerAllowNonTLS TLSMode = 2
+	MutualOnlyTLSMode TLSMode = 3
+	MutualAllowNonTLS TLSMode = 4
 )
 
-type TlsSigningAuthority string
+type TLSSigningAuthority string
 
 const (
-	SelfSignedTlsSigningAuthority  TlsSigningAuthority = "SelfSigned"
-	MicrosoftCATlsSigningAuthority TlsSigningAuthority = "MicrosoftCA"
+	SelfSignedTLSSigningAuthority  TLSSigningAuthority = "SelfSigned"
+	MicrosoftCATLSSigningAuthority TLSSigningAuthority = "MicrosoftCA"
 )
 
 type AMTRedirectionServiceEnabledStates int

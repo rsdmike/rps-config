@@ -17,13 +17,12 @@ services:
     container_name: app
     image: app
     environment:
-      PG_URL: 'postgres://user:pass@postgres:5432/postgres'
+      PG_URL: 'postgres://postgresadmin:admin123@postgres:5432/rpsdb'
     ports:
       - 8080:8080
       - 8081:8081
     depends_on:
       - postgres
-
 
   integration:
     build:
