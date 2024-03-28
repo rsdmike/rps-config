@@ -1,4 +1,4 @@
-package repo
+package postgresdb
 
 import (
 	"context"
@@ -13,11 +13,11 @@ import (
 
 // DomainRepo -.
 type DomainRepo struct {
-	*postgres.Postgres
+	*postgres.DB
 }
 
 // New -.
-func NewDomainRepo(pg *postgres.Postgres) *DomainRepo {
+func NewDomainRepo(pg *postgres.DB) *DomainRepo {
 	return &DomainRepo{pg}
 }
 
@@ -48,6 +48,9 @@ func (r *DomainRepo) GetCount(ctx context.Context, tenantID string) (int, error)
 
 // Get -.
 func (r *DomainRepo) Get(ctx context.Context, top, skip int, tenantID string) ([]entity.Domain, error) {
+	if top == 0 {
+		top = 100
+	}
 	sql, _, err := r.Builder.
 		Select(`name as "profileName",
 				domain_suffix as "domainSuffix",
