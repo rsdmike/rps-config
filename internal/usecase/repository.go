@@ -1,7 +1,7 @@
 package usecase
 
 import (
-	"github.com/rsdmike/rps/internal/usecase/repo"
+	"github.com/rsdmike/rps/internal/usecase/postgresdb"
 	"github.com/rsdmike/rps/pkg/postgres"
 )
 
@@ -11,8 +11,8 @@ type Repositories struct {
 }
 
 // New -.
-func New(pg *postgres.Postgres) *Repositories {
+func New(pg *postgres.DB) *Repositories {
 	return &Repositories{
-		Domains: repo.NewDomainRepo(pg),
+		Domains: postgresdb.NewDomainRepo(pg),
 	}
 }

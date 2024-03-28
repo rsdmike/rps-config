@@ -39,8 +39,6 @@ func Run(cfg *config.Config) {
 	defaultConfig := cors.DefaultConfig()
 	defaultConfig.AllowOrigins = cfg.HTTP.AllowedOrigins
 	defaultConfig.AllowHeaders = cfg.HTTP.AllowedHeaders
-	// config.AllowOrigins = []string{"http://google.com", "http://facebook.com"}
-	// config.AllowAllOrigins = true
 
 	handler.Use(cors.New(defaultConfig))
 	v1.NewRouter(handler, log, *usecases)
